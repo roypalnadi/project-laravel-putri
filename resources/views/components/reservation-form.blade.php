@@ -4,7 +4,9 @@
             <div class="form-group row col-md-5">
                 <label for="acara" class="col-form-label">Acara</label>
                 <div class="col-md-8">
-                    <input type="text" class="form-control" id="acara">
+                <select class="form-control" id="nomer_kamar">
+                            <option>Select...</option>
+                        </select>
                 </div>
             </div>
             <div class="form-group row col-md-7">

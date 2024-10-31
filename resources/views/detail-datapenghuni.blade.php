@@ -2,10 +2,10 @@
 
 @section('content')
     @php
-        $title = "Dashboard";
+        $title = "Detail data Penghuni";
         $breadcrumbs = [
             ['name' => 'Homes', 'link' => '#'],
-            ['name' => 'Dashboard', 'link' => '#'],
+            ['name' => 'Penghuni', 'link' => '#'],
         ];
         $rooms = [
             (object)['id' => 1, 'number' => '101'],
@@ -15,5 +15,5 @@
     @endphp
 
     <x-content :title="$title" :breadcrumbs="$breadcrumbs" />
-    <x-reservation-dashboard />
+    <x-reservation-detail-datapenghuni />
 @endsection

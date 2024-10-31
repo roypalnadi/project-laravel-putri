@@ -1,22 +1,3 @@
-@extends('layouts.app')
-
-@section('content')
-@php
-        $title = "Data Kamar";
-        $breadcrumbs = [
-            ['name' => 'Homes', 'link' => '#'],
-            ['name' => 'Data Kamar', 'link' => '#'],
-        ];
-        $rooms = [
-            (object)['id' => 1, 'number' => '101'],
-            (object)['id' => 2, 'number' => '102'],
-            // Add more room objects as needed
-        ];
-    @endphp
-
-    <x-content :title="$title" :breadcrumbs="$breadcrumbs" />
-   {{-- resources/views/data-kamar.blade.php --}}
-
 
     <!-- Pesan notifikasi statis -->
     <div class="alert alert-success">Kamar berhasil ditambahkan!</div>
@@ -35,19 +16,7 @@
                 <th>Aksi</th>
             </tr>
         </thead>
-        <tbody>
-            @foreach ([['id' => 1, 'nomor' => 101, 'status' => 'ON'], ['id' => 2, 'nomor' => 102, 'status' => 'ON']] as $index => $kamar)
-                <tr>
-                    <td>{{ $index + 1 }}</td>
-                    <td>{{ $kamar['nomor'] }}</td>
-                    <td>{{ $kamar['status'] }}</td>
-                    <td>
-                        <button class="btn btn-warning btn-sm text-white">Edit</button>
-                        <button class="btn btn-danger btn-sm">Hapus</button>
-                    </td>
-                </tr>
-            @endforeach
-        </tbody>
+        
     </table>
 </div>
 
@@ -82,4 +51,3 @@
         </form>
     </div>
 </div>
-@endsection

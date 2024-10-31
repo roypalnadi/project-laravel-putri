@@ -30,6 +30,10 @@ Route::get('/data-penghuni', function () {
     return view('data-penghuni');
 })->name("dataPenghuni");
 
+Route::get('/detail-datapenghuni', function () {
+    return view('detail-datapenghuni');
+})->name("detaildatapenghuni");
+
 Route::get('/riwayat', function () {
     return view('riwayat');
 })->name("riwayat");
