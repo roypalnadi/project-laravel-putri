@@ -13,14 +13,19 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>101</td>
-                    <td>L/P</td>
-                    <td><span class="badge badge-success">Available</span></td>
-                </tr>
+                @foreach ($data as $key => $item)
+                    <tr>
+                        <td>{{ ++$key }}</td>
+                        <td>{{ $item->room_number }}</td>
+                        <td>{{ $item->type_gender }}</td>
+                        <td><span class="badge badge-success">{{ $item->status }}</span></td>
+                    </tr>
+                @endforeach
                 <!-- Data lainnya -->
             </tbody>
         </table>
+        <div class="d-flex justify-content-end mt-2">
+            {{ $data->links() }}
+        </div>
     </div>
 </div>

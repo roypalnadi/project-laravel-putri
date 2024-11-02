@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ReservationController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -18,9 +19,13 @@ Route::get('/', function () {
     return view('dashboard');
 })->name("dashboard");
 
-Route::get('/pemesanan', function () {
-    return view('pemesanan');
-})->name("pemesanan");
+Route::prefix("/pemesanan")
+    ->controller(ReservationController::class)
+    ->name("pemesanan.")
+    ->group(function () {
+        Route::get('/', 'index')->name("index");
+        Route::post('/save', 'save')->name("save");
+    });
 
 Route::get('/data-kamar', function () {
     return view('data-kamar');

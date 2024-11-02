@@ -19,7 +19,7 @@
         <div class="content-wrapper">
 
             <section class="content">
-                <div class="container-fluid">
+                <div class="container-fluid bg-light">
                     @yield('content')
                 </div>
             </section>

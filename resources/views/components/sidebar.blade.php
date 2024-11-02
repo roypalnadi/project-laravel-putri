@@ -38,7 +38,7 @@
                 </a>
             </li>
             <li class="nav-item menu-open">
-                <a href="{{route('pemesanan')}}" class="nav-link {{Request::routeIs('pemesanan') ? 'active' : ''}}">
+                <a href="{{route('pemesanan.index')}}" class="nav-link {{Request::routeIs('pemesanan.index') ? 'active' : ''}}">
                     <i class="nav-icon fas fa-solid fa-file-invoice"></i>
                     <p>Pemesanan</p>
                 </a>
